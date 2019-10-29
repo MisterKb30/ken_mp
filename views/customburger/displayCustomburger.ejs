@@ -1,0 +1,82 @@
+<%- include('../includes/head.ejs') %>
+</head>
+
+<body>
+    <%- include('../includes/nav.ejs') %>
+    <section class="section">
+        <div class="container">
+            <div>
+                <h2 class="title">List of Burgers</h2>
+                <form class="product-form" action="/customburger/<%=audience.id%>" method="POST">
+                    <input hidden value="<%=audience.id%>" name="id">
+                    <div class="field">
+                        <label class="label"><i class="mdi mdi-24px mdi-comment-account">
+                            </i>Type Of Burger</label>
+                        <div class="control">
+                            <input class="input is-info" type="text" value="<%=audience.name%>" name="name"
+                                placeholder="Enter your name" readonly>
+                        </div>
+                    </div>
+                    <div class="field">
+                        <label class="label"><i class="mdi mdi-24px mdi-comment">
+                            </i>Burger Patty (Chicken or Beef)?</label>
+                        <div class="control">
+                            <textarea class="textarea is-info" type="text" name="q1"
+                                placeholder="Enter your comment for Question #1" readonly><%=audience.q1%></textarea>
+                        </div>
+                    </div>
+                    <div class="field">
+                        <label class="label"><i class="mdi mdi-24px mdi-comment">
+                            </i>Do you want to add addiotnal patty?</label>
+                        <div class="control">
+                            <textarea class="textarea is-info" type="text" name="q2"
+                                placeholder="Enter your comment for Question #2" readonly><%=audience.q2%></textarea>
+                        </div>
+                    </div>
+                    <div class="field">
+                        <label class="label"><i class="mdi mdi-24px mdi-comment">
+                            </i>Type of Cheese (Mozzarella or Cheddar)</label>
+                        <div class="control">
+                            <textarea class="textarea is-info" type="text" name="q3"
+                                placeholder="Enter your comment for Question #3" readonly><%=audience.q3%></textarea>
+                        </div>
+                    </div>
+                    <div class="field">
+                        <label class="label"><i class="mdi mdi-24px mdi-comment">
+                            </i>Do you want to add Vegatable?</label>
+                        <div class="control">
+                            <textarea class="textarea is-info" type="text" name="q4"
+                                placeholder="Enter your comment for Question #4" readonly><%=audience.q4%></textarea>
+                        </div>
+                    </div>
+                    <div class="field">
+                        <label class="label"><i class="mdi mdi-24px mdi-comment">
+                            </i>Do you want to add sidedish?</label>
+                        <div class="control">
+                            <textarea class="textarea is-info" type="text" name="q5"
+                                placeholder="Enter your comment for Question #5"readonly><%=audience.q5%></textarea>
+                        </div>
+                    </div>
+                    <div class="field is-grouped">
+                        <div class="control">
+                            <a class="button is-rounded" href="/customburger/showCustomburger">
+                                <i class="mdi mdi-24px mdi-arrow-left-bold">
+                                </i>Go Back
+                            </a>
+                        </div>
+                        <div class="control">
+                            <a class="button is-rounded" href="/">
+                                <i class="mdi mdi-24px mdi-home-circle">
+                                </i>Go Back to Main menu
+                            </a>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+    <%- include('../includes/footer.ejs') %>
+    <%- include('../includes/scripts.ejs') %>
+</body>
+
+</html>

@@ -1,0 +1,32 @@
+<%- include('./includes/head.ejs') %>
+</head>
+
+<body>
+  <%- include('./includes/nav.ejs') %>
+  <section class="section">
+    <div class="container">
+      <div class="field is-grouped is-grouped-centered">
+        <div class="control">
+          <p class="title is-1">Burger Creation by KB</p>
+          <p class="subtitle is-3">Please select your Burger</p>
+          <div class="field is-grouped is-grouped-centered">
+            <div class="control">
+              <a class="button is-rounded" href="/customburger">
+                <i class="mdi mdi-24px mdi-food">
+                </i>KB Create your own
+              </a>
+              <a class="button is-rounded" href="/setburger">
+                <i class="mdi mdi-24px mdi-food">
+                </i>KB Meals
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <%- include('./includes/footer.ejs') %>
+  <%- include('./includes/scripts.ejs') %>
+</body>
+
+</html>

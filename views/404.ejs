@@ -1,0 +1,31 @@
+<%- include('./includes/head.ejs') %>
+</head>
+
+<body>
+    <%- include('includes/nav.ejs') %>
+    <section class="section">
+        <div class="container">
+            <div class="has-text-centered">
+                <p class="title is-1">404 Error - Page Not Found!</p>
+                <p class="subtitle is-3">Please select an option below to continue</p>
+                <div class="field is-grouped is-grouped-centered">
+                    <div class="control">
+                        <a class="button is-rounded" onclick="goBack()">
+                            <i class="mdi mdi-24px mdi-arrow-left-bold">
+                            </i>Go Back to Previous Page
+                        </a>
+                    </div>
+                    <div class="control">
+                        <a class="button is-rounded" href="/">
+                            <i class="mdi mdi-24px mdi-home-circle">
+                            </i>Go Back to Home Page
+                        </a>
+                    </div>
+                </div>
+            </div>
+    </section>
+    <%- include('includes/footer.ejs') %>
+    <%- include('includes/scripts.ejs') %>
+</body>
+
+</html>

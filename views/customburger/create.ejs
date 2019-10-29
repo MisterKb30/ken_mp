@@ -1,0 +1,89 @@
+<%- include('../includes/head.ejs') %>
+</head>
+
+<body>
+    <%- include('../includes/nav.ejs') %>
+    <section class="section">
+        <div class="container">
+            <div>
+                <h2 class="title">Burger Creator</h2>
+                <form class="product-form" action="/customburger" method="POST">
+                    <div class="field">
+                        <label class="label"><i class="mdi mdi-24px mdi-comment">
+                            </i>Type of Burger</label>
+                        <div class="control">
+                            <input class="input is-info" type="text" name="name" placeholder="Enter your name">
+                        </div>
+                    </div>
+                    <div class="field">
+                        <label class="label"><i class="mdi mdi-24px mdi-comment">
+                            </i>Type of Patty</label>
+                        <div class="control">
+                            <textarea class="textarea is-info" type="text" name="q1"
+                                placeholder="Enter your comment for Question #1"></textarea>
+                        </div>
+                    </div>
+                    <div class="field">
+                        <label class="label"><i class="mdi mdi-24px mdi-comment">
+                            </i>Do you want to add more patty?</label>
+                        <div class="control">
+                            <textarea class="textarea is-info" type="text" name="q2"
+                                placeholder="Enter your comment for Question #2"></textarea>
+                        </div>
+                    </div>
+                    <div class="field">
+                        <label class="label"><i class="mdi mdi-24px mdi-comment">
+                            </i>Type of Cheese (Mozzarella or Cheddar)                        </label>
+                        <div class="control">
+                            <textarea class="textarea is-info" type="text" name="q3"
+                                placeholder="Enter your comment for Question #3"></textarea>
+                        </div>
+                    </div>
+                    <div class="field">
+                        <label class="label"><i class="mdi mdi-24px mdi-comment">
+                            </i> Do you want to add Vegatable?</label>
+                        <div class="control">
+                            <textarea class="textarea is-info" type="text" name="q4"
+                                placeholder="Enter your comment for Question #4"></textarea>
+                        </div>
+                    </div>
+                    <div class="field">
+                        <label class="label"><i class="mdi mdi-24px mdi-comment">
+                            </i>Do you want to add sidedish?</label>
+                        <div class="control">
+                            <textarea class="textarea is-info" type="text" name="q5"
+                                placeholder="Enter your comment for Question #5"></textarea>
+                        </div>
+                    </div>
+                    <div class="field is-grouped">
+                        <div class="control">
+                            <button class="button is-rounded" type="submit">Confirm Order</button>
+                        </div>
+                        <div class="control">
+                            <a class="button is-rounded" href="/customburger/create">
+                                <i class="mdi mdi-24px mdi-eraser">
+                                </i>Clear All Entries
+                            </a>
+                        </div>
+                        <div class="control">
+                            <a class="button is-rounded" href="/customburger">
+                                <i class="mdi mdi-24px mdi-arrow-left-bold">
+                                </i>Go Back
+                            </a>
+                        </div>
+                        <div class="control">
+                            <a class="button is-rounded" href="/">
+                                <i class="mdi mdi-24px mdi-home-circle">
+                                </i>Go Back to Home Page
+                            </a>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+    <%- include('../includes/footer.ejs') %>
+    <%- include('../includes/scripts.ejs') %>
+</body>
+
+</html>

@@ -1,0 +1,39 @@
+<%- include('../includes/head.ejs') %>
+</head>
+
+<body>
+  <%- include('../includes/nav.ejs') %>
+  <section class="section">
+    <div class="container">
+      <h1 class="title">Select an Option</h1>
+      <div class="field is-grouped is-grouped-centered">
+        <div class="control">
+          <a class="button is-rounded" href="/setburger/showBurger">
+            <i class="mdi mdi-24px mdi-food">
+            </i>View/Delete Set Meals
+          </a>
+        </div>
+      </div>
+      <div class="field is-grouped is-grouped-centered">
+        <div class="control">
+          <a class="button is-rounded" href="/setburger/showBurgerRename">
+            <i class="mdi mdi-24px mdi-food">
+            </i>Rename Set Meals
+          </a>
+        </div>
+      </div>
+      <div class="field is-grouped is-grouped-centered">
+        <div class="control">
+          <a class="button is-rounded" href="/">
+            <i class="mdi mdi-24px mdi-arrow-left-bold">
+            </i>Go Back
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+  <%- include('../includes/footer.ejs') %>
+  <%- include('../includes/scripts.ejs') %>
+</body>
+
+</html>

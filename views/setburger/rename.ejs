@@ -1,0 +1,51 @@
+<%- include('../includes/head.ejs') %>
+</head>
+
+<body>
+    <%- include('../includes/nav.ejs') %>
+    <section class="section">
+        <div class="container">
+            <div>
+                <h2 class="title">Rename Audience</h2>
+                <form class="product-form" action="/setburger/<%=audience.id%>" method="POST">
+                    <input hidden value="<%=audience.id%>" name="id">
+                    <input hidden value="<%=audience.q1%>" name="q1">
+                    <input hidden value="<%=audience.q2%>" name="q2">
+                    <input hidden value="<%=audience.q3%>" name="q3">
+                    <input hidden value="<%=audience.q4%>" name="q4">
+                    <input hidden value="<%=audience.q5%>" name="q5">
+                    <input hidden value="<%=audience.createdAt%>" name="createdAt">
+                    <div class="field">
+                        <label class="label"><i class="mdi mdi-24px mdi-comment-account">
+                            </i>Type of Burger</label>
+                        <div class="control">
+                            <input class="input is-info" type="text" value="<%=audience.name%>" name="name"
+                                placeholder="Enter your name">
+                        </div>
+                    </div>
+                    <div class="field is-grouped">
+                        <div class="control">
+                            <button class="button is-rounded" type="submit">Edit Burger</button>
+                        </div>
+                        <div class="control">
+                            <a class="button is-rounded" href="/setburger/showBurgerRename">
+                                <i class="mdi mdi-24px mdi-arrow-left-bold">
+                                </i>Go Back
+                            </a>
+                        </div>
+                        <div class="control">
+                            <a class="button is-rounded" href="/">
+                                <i class="mdi mdi-24px mdi-home-circle">
+                                </i>Go Back to Main Menu
+                            </a>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+    <%- include('../includes/footer.ejs') %>
+    <%- include('../includes/scripts.ejs') %>
+</body>
+
+</html>

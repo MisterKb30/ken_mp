@@ -1,0 +1,63 @@
+<%- include('../includes/head.ejs') %>
+</head>
+
+<body>
+    <%- include('../includes/nav.ejs') %>
+    <section class="section">
+        <div class="container">
+            <div class="field is-grouped is-grouped-centered">
+                <div class="control">
+                    <a class="button is-rounded" href="/setburger">
+                        <i class="mdi mdi-24px mdi-arrow-left-bold">
+                        </i>Go Back
+                    </a>
+                </div>
+                <div class="control">
+                    <a class="button is-rounded" href="/">
+                        <i class="mdi mdi-24px mdi-home-circle">
+                        </i>Go Back to Home Page
+                    </a>
+                </div>
+            </div>
+            <div class="columns is-multiline">
+                <% if (audienceacc.length > 0) { %>
+                <% for (let audience of audienceacc) { %>
+                <div class="column is-one-quarter">
+                    <div class="card">
+                        <div class="card-content">
+                            <div class="media">
+                                <div class="media-content">
+                                    <p class="title is-3 is-spaced">Name: <%=audience.name%></p>
+                                    <p class="subtitle is-6">Date Created: <%=audience.createdAt%></p>
+                                </div>
+                            </div>
+                            <footer class="card-footer">
+                                <a class="card-footer-item has-text-centered" href="/setburger/<%=audience.id%>/rename">
+                                    <span class="icon">
+                                        <i class="mdi mdi-account-edit"></i>
+                                    </span>
+                                    <span>Rename</span>
+                                </a>
+                            </footer>
+                        </div>
+                    </div>
+                </div>
+                <% } %>
+                <% } else { %>
+                <section class="section">
+                    <div class="container">
+                        <div class="content has-text-centered">
+                            <p class="title is-1">No entries have been found!</p>
+                            <p class="subtitle is-3">Please select an option above to continue</p>
+                        </div>
+                    </div>
+                </section>
+                <% } %>
+            </div>
+        </div>
+    </section>
+    <%- include('../includes/footer.ejs') %>
+    <%- include('../includes/scripts.ejs') %>
+</body>
+
+</html>
